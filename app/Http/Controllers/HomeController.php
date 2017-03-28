@@ -49,15 +49,25 @@ class HomeController extends Controller
         $str = "";
         $current = Carbon::now();
         $prev= $data['tm'];
-      
-       
+        $id = $data['wordindex'];
+        $sentence_list= DB::table('pos_data_table')->where('id',$id)->get();
+        $sent = $sentence_list[0]->content;
+    
         for($i=0;$i<$data['sz'];$i++)
         {
             $str =  $str.$data[$i]."-";
         }
         //return $str.$data['wordindex'];
        
-       
+       return view('test')
+        ->with('str', $str)
+        ->with('prev', $prev)
+        ->with('id', $sent)
+        ->with('curr', $current->toTimeString());
+
+
+
+
 
          $dt=array(
                     's_id' => $data['wordindex'],
@@ -78,6 +88,12 @@ class HomeController extends Controller
      
         return redirect()->route('home');
        
+    }
+    public function edit(){
+        
+        
+        $data = $requst->all();
+        return $data['tm'];
     }
 
 }
