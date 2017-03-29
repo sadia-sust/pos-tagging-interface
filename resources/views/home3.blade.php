@@ -16,7 +16,8 @@
   </i>
   </strong>
 </h4>
-</div>
+</div> 
+
  <div class="col-md-3" style="border: 2px solid red;border-radius: 10px;margin-bottom: 10px;">
      Legend: <br>
      NN বিশেষ্য  &nbsp  &nbsp  &nbsp  PR সর্বনাম  <br>
@@ -27,6 +28,8 @@
      PNC যতিচিহ্ন  &nbsp  RD অন্যান্য  <br>
   
      </div>
+     
+
 </div>
     <div class="row">
         <div class="col-md-12 ">
@@ -61,20 +64,82 @@
                         <p>  {{  $pieces[$i]}} </p>
                                 
                              <select name="{{$i}}" >  
+                                
+                                 <option value="NN" @if($tags[$i] == 'NN')
+                                    selected 
+                                   @endif> NN</option>
+                                 <option value="PR" @if($tags[$i] == 'PR')
+                                    selected 
+                                   @endif>PR</option>
+                                 <option value="DM" @if($tags[$i] == 'DM')
+                                    selected 
+                                   @endif >DM</option>
+                                 <option value="V"  @if($tags[$i] == 'V')
+                                    selected 
+                                   @endif> V</option>
+                                 <option value="JJ" @if($tags[$i] == 'JJ')
+                                    selected 
+                                   @endif >JJ</option>
+                                  <option value="RB" @if($tags[$i] == 'RB')
+                                    selected 
+                                   @endif > RB</option>
+                                 <option value="PSP" @if($tags[$i] == 'PSP')
+                                    selected 
+                                   @endif >PSP</option>
+                                <option value="CC"  @if($tags[$i] == 'CC')
+                                    selected 
+                                   @endif>CC</option>
+                                 <option value="RP"  @if($tags[$i] == 'RP')
+                                    selected 
+                                   @endif>RP</option>
+                                  <option value="QT" @if($tags[$i] == 'QT')
+                                    selected 
+                                   @endif >QT</option>
+                                   <option value="PNC"  @if($tags[$i] == 'PNC')
+                                    selected 
+                                   @endif>PNC</option>
+                                    <option value="RD"  @if($tags[$i] == 'RD')
+                                    selected 
+                                   @endif>RD</option>
 
-                             
-                                 <option value="NN"> NN</option>
-                                 <option value="PR">PR</option>
-                                 <option value="DM">DM</option>
-                                 <option value="V"> V</option>
-                                 <option value="JJ">JJ</option>
-                                  <option value="RB"> RB</option>
-                                 <option value="PSP">PSP</option>
-                                <option value="CC">CC</option>
-                                 <option value="RP">RP</option>
-                                  <option value="QT">QT</option>
-                                   <option value="PNC">PNC</option>
-                                    <option value="RD">RD</option>
+
+
+
+
+
+
+
+
+
+                                 <option value="NN" 
+                                   
+                                   @if($tags[$i] == 'NN')
+                                    selected 
+                                   @endif
+                                > NN</option>
+                                 <option value="PN"
+                                 @if($tags[$i] == 'PN')
+                                    selected 
+                                   @endif
+                                 >PN</option>
+                                 <option value="VB" @if($tags[$i] == 'VB')
+                                    selected 
+                                   @endif> VB</option>
+                                 <option value="ADJ" @if($tags[$i] == 'ADJ')
+                                    selected 
+                                   @endif> ADJ</option>
+                                 <option value="ADV" @if($tags[$i] == 'ADV')
+                                    selected 
+                                   @endif>ADV</option>
+                                  <option value="RP" @if($tags[$i] == 'RP')
+                                    selected 
+                                   @endif> RP</option>
+                                 <option value="CC" @if($tags[$i] == 'CC')
+                                    selected 
+                                   @endif> CC</option>
+                                 <option value="RD" @if($tags[$i] == 'RD')
+                                    selected 
+                                   @endif >RD</option>
 
 
   

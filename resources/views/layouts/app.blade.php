@@ -74,17 +74,7 @@
                 
                 </div>
                 </div>
-                    <div class="col-md-2" style="border: 2px solid red;border-radius: 10px;">
-     Legend: <br>
-     NN: বিশেষ্য <br>
-     PN: সর্বনাম<br>
-     VB: ক্রিয়া<br>
-     ADJ: বিশেষণ<br>
-    ADV ক্রিয়া বিশেষণ<br>
-    RP : অব্যয় <br>
-   CC: সংজোজক<br>
-    RD:অন্যান্য<br>
-     </div>
+                   
 
            <!--      <div class="collapse navbar-collapse" id="app-navbar-collapse">
                    
