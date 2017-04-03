@@ -1,9 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<div>
+<h4>You have Tagged {{$tag_count}} documents yet</h4>
+</div>
 <div class="container">
 <div class="row">
 <div class="col-md-8">
+
+</div>
+<div class="row">
+<div class="col-md-8">
+
 <p ><strong>Tag the sentences:</strong></p>
 <h4> 
 <strong>
@@ -29,7 +37,9 @@
      </div>
 </div>
     <div class="row">
+
         <div class="col-md-12 ">
+
             <div  >
                
                 {!! Form::open([
@@ -60,9 +70,9 @@
                         <div class="col-md-1" style="padding-bottom: 10px;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 10px;margin-top: 10px;">
                         <p>  {{  $pieces[$i]}} </p>
                                 
-                             <select name="{{$i}}" >  
-
-                             
+                             <select name="{{$i}}"  required="" >  
+                                
+                                 <option value=""> </option> 
                                  <option value="NN"> NN</option>
                                  <option value="PR">PR</option>
                                  <option value="DM">DM</option>
@@ -120,6 +130,15 @@
                     {!! Form::close() !!}
                 </div> -->
             </div>
+            <marquee
+            style="width:100%;margin-top:1%;position:absolute;"
+            behavior="scroll"
+            direction="left"
+            speed="slow">
+                          
+              <h3 style="color:black">For bengali tag set examples, <a href="http://10.100.32.154:8000/help.pdf" target="_blank">CLICK HERE</a></h3>
+              
+       </marquee>
         </div>
     </div>
 </div>

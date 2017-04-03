@@ -11,7 +11,7 @@
                         {{ csrf_field() }}
 
                         <div style="margin: 10px;padding: 10px;">
-                            <label for="name" class="col-md-4 control-label">Username / Reg no</label>
+                            <label for="name" class="col-md-4 control-label">Registration no</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="reg"  required autofocus>

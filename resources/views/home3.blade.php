@@ -63,8 +63,8 @@
                         <div class="col-md-1" style="padding-bottom: 10px;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 10px;margin-top: 10px;">
                         <p>  {{  $pieces[$i]}} </p>
                                 
-                             <select name="{{$i}}" >  
-                                
+                             <select name="{{$i}}" required="" >  
+                                <option value=""></option>
                                  <option value="NN" @if($tags[$i] == 'NN')
                                     selected 
                                    @endif> NN</option>
@@ -111,35 +111,7 @@
 
 
 
-                                 <option value="NN" 
-                                   
-                                   @if($tags[$i] == 'NN')
-                                    selected 
-                                   @endif
-                                > NN</option>
-                                 <option value="PN"
-                                 @if($tags[$i] == 'PN')
-                                    selected 
-                                   @endif
-                                 >PN</option>
-                                 <option value="VB" @if($tags[$i] == 'VB')
-                                    selected 
-                                   @endif> VB</option>
-                                 <option value="ADJ" @if($tags[$i] == 'ADJ')
-                                    selected 
-                                   @endif> ADJ</option>
-                                 <option value="ADV" @if($tags[$i] == 'ADV')
-                                    selected 
-                                   @endif>ADV</option>
-                                  <option value="RP" @if($tags[$i] == 'RP')
-                                    selected 
-                                   @endif> RP</option>
-                                 <option value="CC" @if($tags[$i] == 'CC')
-                                    selected 
-                                   @endif> CC</option>
-                                 <option value="RD" @if($tags[$i] == 'RD')
-                                    selected 
-                                   @endif >RD</option>
+                                
 
 
   

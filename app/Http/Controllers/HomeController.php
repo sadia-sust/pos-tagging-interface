@@ -21,6 +21,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function admin()
+    {
+        $least=DB::table('tags')->get();
+        return view('admin',compact('least'));
+
+
+    }
+
     public function index()
     {
 
@@ -32,12 +40,13 @@ class HomeController extends Controller
         $ind= $least_used[0]->id;
         
         $pieces = explode(" ", $sentence_list[0]->content);
-       
-      
+        $tag_count= DB::table('tags')->where('username',Auth::user()->name)->count();
+
+        
         $current = Carbon::now();
 
-   
-        return view('home',compact('pieces','ind','current'));
+    
+        return view('home',compact('pieces','ind','current','tag_count'));
        
     }
     public function backindex($id,$str)
