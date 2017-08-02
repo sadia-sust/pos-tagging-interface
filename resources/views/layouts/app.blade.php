@@ -38,10 +38,13 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}" >
                        Bengali POS Tagging
                     </a>
 
+         <a class="navbar-brand" href="{!! route('leaderboard') !!}"style="color: red;">
+                       View leaderBoard
+                    </a>
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())

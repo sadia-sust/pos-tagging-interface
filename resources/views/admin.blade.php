@@ -4,7 +4,10 @@
 <div >
 		<table id="admin" class="display"  cellspacing="0" >
 	         <thead>
-	            <th>registration</th>
+	            <th>username</th>
+	            <th>Document ID</th>
+	            <th>Profile Martix</th>
+
 	         </thead>
 	         <tbody>
 	        
@@ -13,7 +16,16 @@
 	          <td>
 	          {{$tmp->username}}
 	          </td>
+	           <td>
+	          {{$tmp->s_id}}
+	          </td>
+	           <td >
+                                
+                                <a href="{!! route('profilematrix',[$tmp->s_id]) !!}" class="btn btn-success" style="margin-right: 3px;text-decoration:none">View
+                                </a>
+                                 </td>
 	         </tr>
+	          
 	         @endforeach
 	         </tbody>
          </table>

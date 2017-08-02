@@ -16,8 +16,9 @@
 		$(document).ready( function () {
     
    $('#admin').dataTable( {
-    "iDisplayLength": 200,
-    "aLengthMenu": [[200, 50, 100, -1], [200, 50, 100, "All"]]
+     "order": [[ 1, "desc" ]],
+      "iDisplayLength": 5,
+    "aLengthMenu": [[5, 50, 100, -1], [5, 50, 100, "All"]]
   } );
 } );
 	</script>

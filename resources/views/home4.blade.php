@@ -43,7 +43,7 @@
             <div  >
                
                 {!! Form::open([
-                        'route' => 'store',
+                        'route' => 'store2',
                         'method' => 'post'
                       ]) 
                     !!}
@@ -58,19 +58,26 @@
                 <div class="row" style="border: 2px solid grey;box-shadow: 8px 8px 5px #888888; padding-bottom: 10px;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px;">
                 
                         @for($i=0;$i<count($pieces);$i++)
-                        @if($pieces[$i] =="।" || $pieces[$i] =="?" || $pieces[$i] =="!")
-                        </div>
-                        <input type="hidden" value="।" name="{{$i}}" id="{{$i}}" />
-                       <div class="row" style="border: 2px solid grey;box-shadow: 8px 8px 5px #888888; padding-bottom: 10px;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px;">
-
-                        
-                         @elseif($pieces[$i] =="")
-                         <input type="hidden" value="।" name="{{$i}}" id="{{$i}}" />
-                         @else
+                       
                         <div class="col-md-1" style="padding-bottom: 10px;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 10px;margin-top: 10px;">
-                        <p>  {{  $pieces[$i]}} </p>
+                        <p style="color:red;">  {{  $pieces[$i]}} </p>
                                 
-                             <select name="{{$i}}"  required="" >  
+                                <input type="radio" name="{{$i}}" value="NN"> NN<br>
+                                <input type="radio" name="{{$i}}" value="PR"> PR<br>
+                                <input type="radio" name="{{$i}}" value="DM"> DM<br>
+                                <input type="radio" name="{{$i}}" value="V">V<br>
+                                <input type="radio" name="{{$i}}" value="JJ">JJ<br>
+                                <input type="radio" name="{{$i}}" value="RB">RB<br>
+                                <input type="radio" name="{{$i}}" value="PSP">PSP<br>
+                                <input type="radio" name="{{$i}}" value="CC">CC<br>
+                                <input type="radio" name="{{$i}}" value="RP">RP<br>
+                                <input type="radio" name="{{$i}}" value="QT">QT<br>
+                                <input type="radio" name="{{$i}}" value="PNC">PNC<br>
+                                <input type="radio" name="{{$i}}" value="RD">RD<br>
+                                   
+  
+
+                             <!-- <select name="{{$i}}"  required="" >  
                                 
                                  <option value=""> </option> 
                                  <option value="NN"> NN</option>
@@ -91,9 +98,9 @@
   
 
 
-                            </select>  
+                            </select>   -->
                          </div>
-                       @endif
+                     
                         @endfor
                           
 
@@ -136,7 +143,7 @@
             direction="left"
             speed="slow">
                           
-              <h3 style="color:black">For bengali tag set examples, <a href="http://10.101.1.130:8000/help.pdf" target="_blank">CLICK HERE</a></h3>
+              <h3 style="color:black">For bengali tag set examples, <a href="http://10.100.32.154:8000/help.pdf" target="_blank">CLICK HERE</a></h3>
               
        </marquee>
         </div>
